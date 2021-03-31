@@ -8207,11 +8207,11 @@ Text = [[
      
 [⌔︙ SMOK 𝖲𝗈𝗎𝗋𝖼𝖾  .](http://t.me/X6YX6)
      
-[⌔︙ CH SMOK .](http://t.me/X6YX6)
+[⌔︙ CH SMOK .](https://t.me/joinchat/AAAAAFPp_oZNV4U3n91zRQ)
      
-[⌔︙ 𝖳WSL Source SMOK .](http://t.me/E444Q)
+[⌔︙ 𝖳WSL Source SMOK .](http://t.me/TwSLBlackBot)
      
-[⌔︙ CH SMOK .](http://t.me/X6YX6)
+[⌔︙   CH SMOK .](http://t.me/YOOTBOT)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 end
