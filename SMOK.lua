@@ -7857,7 +7857,7 @@ end
 end
 end
 if text == "غنيلي" then
-data,res = https.request('https://Smok-source.tk/SmokTeAM/audios.php')
+data,res = https.request('https://Black-source.tk/BlackTeAM/audios.php')
 if res == 200 then
 audios = json:decode(data)
 if audios.Info == true then
