@@ -7752,8 +7752,8 @@ if text == ("تحديث السورس") and DevSMOK(msg) then
 send(msg.chat_id_,msg.id_,'⌔︙تم التحديث')
 os.execute('rm -rf SMOK.lua')
 os.execute('rm -rf start.lua')
-os.execute('wget https://raw.githubusercontent.com/SMOKTele/SMOK/master/SMOK.lua')
-os.execute('wget https://raw.githubusercontent.com/SMOKTele/SMOK/master/start.lua')
+os.execute('wget https://raw.githubusercontent.com/SMOK-S/SMOK/master/SMOK.lua')
+os.execute('wget https://raw.githubusercontent.com/SMOK-S/SMOK/master/start.lua')
 dofile('SMOK.lua')  
 return false
 end
