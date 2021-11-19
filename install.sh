@@ -1,16 +1,16 @@
 #!/usr/bin/env bash
-cd $HOME/SMOK
+cd $HOME/Red_BuLL_Team
 install() {
 rm -rf $HOME/.telegram-cli
 sudo chmod +x tg
-chmod +x SMOK
+chmod +x Red_BuLL_Team
 chmod +x ts
 ./ts
 }
 get() {
-rm -fr SMOK.lua
+rm -fr Red_BuLL_Team.lua
 rm -fr sudo.lua
-wget "https://raw.githubusercontent.com/SMOK-S/SMOK/master/SMOK.lua"
+wget "https://raw.githubusercontent.com/SMOK-S/Red_BuLL_Team/master/Red_BuLL_Team.lua"
 lua start.lua
 }
 installall(){
@@ -47,7 +47,7 @@ fi
 installall
 cd ..
 rm -rf luarocks*
-cd SMOK
+cd Red_BuLL_Team
 rm -rf luarocks*
 lua start.lua
 
