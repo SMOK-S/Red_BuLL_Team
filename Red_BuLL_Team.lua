@@ -8350,7 +8350,6 @@ end
 if text and text:match("^(.*)$") then
 if database:get(bot_id.."Red_BuLL_Team:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_) == "true" then
 send(msg.chat_id_, msg.id_, '✬︙الان ارسل الرد الذي تريد اضافته \n✬︙قد يكون (ملف - فديو - نص - ملصق - بصمه - متحركه )\n✬︙يمكنك اضافه الى النص :\n- `#username` > اسم المستخدم\n- `#msgs` > عدد رسائل المستخدم\n- `#name` > اسم المستخدم\n- `#id` > ايدي المستخدم\n- `#stast` > موقع المستخدم \n- `#edit` > عدد السحكات ')
-database:set(bot_id.."Red_BuLL_Team:Set:Manager:rd"..msg.sender_user_id_..":"..msg.chat_id_,"true1")
 database:set(bot_id.."Red_BuLL_Team:Text:Manager"..msg.sender_user_id_..":"..msg.chat_id_, text)
 database:del(bot_id.."Red_BuLL_Team:Add:Rd:Manager:Vico"..text..msg.chat_id_)   
 database:del(bot_id.."Red_BuLL_Team:Add:Rd:Manager:Text"..text..msg.chat_id_)   
@@ -8379,7 +8378,6 @@ if text and not database:get(bot_id.."Red_BuLL_Team:Reply:Manager"..msg.chat_id_
 if not database:sismember(bot_id..'Red_BuLL_Team:Spam:Group'..msg.sender_user_id_,text) then
 local anemi = database:get(bot_id.."Red_BuLL_Team:Add:Rd:Manager:Gif"..text..msg.chat_id_)   
 local veico = database:get(bot_id.."Red_BuLL_Team:Add:Rd:Manager:Vico"..text..msg.chat_id_)   
-local stekr = database:get(bot_id.."Red_BuLL_Team:Add:Rd:Manager:Stekrs"..text..msg.chat_id_)     
 local Text = database:get(bot_id.."Red_BuLL_Team:Add:Rd:Manager:Text"..text..msg.chat_id_)   
 local photo = database:get(bot_id.."Red_BuLL_Team:Add:Rd:Manager:Photo"..text..msg.chat_id_)
 local video = database:get(bot_id.."Red_BuLL_Team:Add:Rd:Manager:Video"..text..msg.chat_id_)
@@ -8400,10 +8398,6 @@ local Text = Text:gsub('#stast',Status_Gps)
 send(msg.chat_id_, msg.id_,'['..Text..']')
 database:sadd(bot_id.."Red_BuLL_Team:Spam:Group"..msg.sender_user_id_,text) 
 end,nil)
-end
-if stekr then 
-sendSticker(msg.chat_id_,msg.id_,stekr)
-database:sadd(bot_id.."Red_BuLL_Team:Spam:Group"..msg.sender_user_id_,text) 
 end
 if veico then 
 sendVoice(msg.chat_id_, msg.id_,veico,"")
